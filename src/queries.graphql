@@ -1,0 +1,27 @@
+mutation CreateBatchToken($batchCertificate: String!) {
+  createBatchToken(batchCertificate: $batchCertificate) {
+    result
+    token
+    batchInfo {
+      uid
+      vaccine
+      batchId
+      dosesRemaining
+    }
+  }
+}
+
+mutation ActivatePassport($token: ID!, $passportId: ID!) {
+  activatePassport(token: $token, passportId: $passportId) {
+    result
+    headshotURL
+    infoURL
+    activationId
+  }
+}
+
+mutation CompleteActivation($activationId: ID!) {
+  completeActivation(activationId: $activationId) {
+    result
+  }
+}
