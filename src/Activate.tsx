@@ -1,4 +1,3 @@
-import _ from "lodash";
 import React, { FC, useCallback } from "react";
 import { useListBatchInfos, useChooseBatchInfo } from "./shared/BatchInfo";
 import { Button } from "./shared/Button";
